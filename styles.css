@@ -96,35 +96,15 @@
 
 .icon_menu .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/icon_menu.svg'));
-  width: 25px;
-	height: 25px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .icon_inst .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/inst_icon.svg'));
-  width: 25px;
-	height: 25px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .icon_rate .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/rate_icon.svg'));
-  width: 25px;
-	height: 25px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .icon_tips .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/tips_icon.svg'));
-  width: 25px;
-	height: 25px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .pages {
@@ -177,7 +157,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
 .footer span {
