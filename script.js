@@ -31,8 +31,6 @@ const calculateStyles = (val, index) => {
   if (val < 50) {
     sliderElements[index].style.setProperty("--opacityIcon", 1 - (val * 2) / 100);
     sliderElements[index].style.setProperty("--linkIcon", `url(./images/${getIconUrl()}.svg)`);
-  } else if (val == 50) {
-    sliderElements[index].style.setProperty("--opacityIcon", 0);
   } else {
     sliderElements[index].style.setProperty("--opacityIcon", ((val % 50) * 2) / 100);
     sliderElements[index].style.setProperty("--linkIcon", `url(./images/${getIconUrl()}2.svg)`);
