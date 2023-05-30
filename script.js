@@ -87,6 +87,30 @@ sliderElements.forEach((e, index) => {
   });
 });
 
+sliderElements.forEach((e, index) => {
+  e.addEventListener("change", () => {
+    if (sliderElements[index].value == 99) {
+      if (index == 0) {
+        pdfElement.classList.add("pages_show");
+        middleElements[0].classList.add("middle_hide");
+        middleElements[1].classList.add("middle_hide");
+        middleElements[2].classList.add("middle_hide");
+        middleElements[3].classList.add("middle_hide");
+        bodyElement.classList.remove("overflow_hide");
+      } else if (index == 1) {
+        instLinkElement.click();
+      } else if (index == 2) {
+        reviewLinkElement.click();
+      } else {
+        netmonetLinkElement.click();
+      }
+      console.log(`${index} submited`);
+    } else {
+      calculateStyles(sliderElements[index].value, index);
+    }
+  });
+});
+
 buttonBackElement.addEventListener("click", () => {
   console.log("1");
 
