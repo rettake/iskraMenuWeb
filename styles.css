@@ -12,7 +12,7 @@
 }
 
 .logo {
-  margin: 243px auto 100px;
+  margin: 190px auto 100px;
 }
 
 .overflow_hide {
@@ -22,7 +22,7 @@
 .middle {
   width: 200px;
   transition: margin-right .8s ease-in;
-  margin-bottom: 0px;
+  margin-bottom: -5px;
   margin-right: 20px;
 }
 
@@ -159,7 +159,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .footer span {
