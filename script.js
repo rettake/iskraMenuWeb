@@ -96,8 +96,8 @@ buttonBackElement.addEventListener("click", () => {
   sliderElements[3].value = 0;
   calculateStyles(sliderElements[0].value, 0);
   calculateStyles(sliderElements[1].value, 1);
-  calculateStyles(sliderElements[2].value, 1);
-  calculateStyles(sliderElements[3].value, 1);
+  calculateStyles(sliderElements[2].value, 2);
+  calculateStyles(sliderElements[3].value, 3);
 
   pdfElement.classList.remove("pages_show");
   middleElements[0].classList.remove("middle_hide");
