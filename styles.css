@@ -1,6 +1,8 @@
 .body {
-  background-image: url(./images/background.png);
-  background-size: contain;
+  background-image: url(./images/thomas_shelby.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
 	padding: 0;
 	height: 100vh;
