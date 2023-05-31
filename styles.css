@@ -103,8 +103,6 @@
 }
 .icon_rate .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/rate_icon.svg'));
-  width: 22px;
-  height: 22px;
 }
 .icon_tips .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/tips_icon.svg'));
