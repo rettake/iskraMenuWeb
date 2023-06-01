@@ -7,6 +7,7 @@
 	padding: 0;
 	height: 100vh;
 	display: flex;
+  padding-top: 200px;
   flex-direction: column;
   gap: 50px;
 	justify-content: center;
@@ -14,7 +15,14 @@
 }
 
 .logo {
-  margin: 200px auto 110px;
+  position: absolute;
+  top: 75px;
+  /* margin: 200px auto 110px; */
+  margin-bottom: 110px;
+}
+
+.logo_menu {
+  left: calc(50% - 141.5px);
 }
 
 .overflow_hide {
@@ -161,7 +169,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .footer span {
