@@ -1,3 +1,18 @@
+@keyframes line {
+  from { opacity: 1; width: 70px; left: 100}
+  to { opacity: 0; width: 0; left: 110px}
+}
+
+@keyframes palec {
+  from { margin-left: 0; opacity: 1; }
+  to { margin-left: 110px; opacity: 0; }
+}
+
+@keyframes ellipse {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 .body {
   background-image: url(./images/thomas_shelby.png);
   background-size: cover;
@@ -18,7 +33,7 @@
   position: absolute;
   top: 75px;
   /* margin: 200px auto 110px; */
-  margin-bottom: 110px;
+  margin-bottom: 55px;
 }
 
 .logo_menu {
@@ -169,7 +184,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .footer span {
@@ -193,4 +208,30 @@
 
 .footer p:last-child {
   text-align: end;
+}
+
+/* ANIMATION */
+
+.animation {
+  width: 130px;
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: 5px;
+}
+
+.palec {
+  position: absolute;
+  animation: 1.3s infinite palec;
+}
+
+.ellipse {
+  left: 107px;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1.7px dashed #ffffff;
+  margin-bottom: 5px;
+  animation: 1.3s infinite ellipse;
 }
