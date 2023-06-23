@@ -1,16 +1,19 @@
-@keyframes line {
-  from { opacity: 1; width: 70px; left: 100}
-  to { opacity: 0; width: 0; left: 110px}
+@keyframes textAnimation {
+  from {}
+  to {}
 }
 
-@keyframes palec {
-  from { margin-left: 0; opacity: 1; }
-  to { margin-left: 110px; opacity: 0; }
+@keyframes iconAnimation {
+  
 }
 
-@keyframes ellipse {
-  from { opacity: 1; }
-  to { opacity: 0; }
+@keyframes buttonAnimation {
+  from {
+    background: rgba(244, 244, 244, 0.10);
+  }
+  to {
+    background: #F4F4F4;
+  }
 }
 
 .body {
@@ -24,7 +27,7 @@
 	display: flex;
   padding-top: 200px;
   flex-direction: column;
-  gap: 50px;
+  gap: 15px;
 	justify-content: center;
 	align-items: center;
 }
@@ -33,7 +36,6 @@
   position: absolute;
   top: 75px;
   /* margin: 200px auto 110px; */
-  margin-bottom: 0;
 }
 
 .logo_menu {
@@ -45,80 +47,58 @@
 }
 
 .middle {
-  width: 200px;
-  transition: margin-right .8s ease-in;
-  margin-bottom: -5px;
-  margin-right: 20px;
+  transition: all .5s linear;
+  opacity: 1;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 30px;
+  border: 1px solid var(--white, #E7E7E7);
+  background: rgba(244, 244, 244, 0.10);
+  backdrop-filter: blur(2px);
+}
+
+.middle_active {
+  background: #F4F4F4;
+}
+
+.middle img {
+  position: absolute;
+  display: inline;
+  transition: all .5s linear;
+  /* top: 17px; */
+  left: 17px;
+}
+
+.middle_active img {
+  right: 17px;
+  left: auto;
+  filter: brightness(0) saturate(100%) invert(2%) sepia(9%) saturate(246%) hue-rotate(314deg) brightness(100%) contrast(80%);
+}
+
+.middle p {
+  position: absolute;
+  display: inline;
+  transition: all .5s linear;
+  top: 9px;
+  right: 17px;
+  margin: 0;
+  color: var(--white, #F4F4F4);
+  font-size: 24px;
+  font-family: Futura PT;
+}
+
+.middle_active p {
+  top: 9px;
+  left: 17px;
+  right: auto;
 }
 
 .middle_hide {
-  margin-right: 500px;
+  opacity: 0;
 }
 
-.slider-container {
-	position: relative;
-}
-
-.slider-container .bar {
-	position: absolute;
-	z-index: 1;
-	top: -23px;
-	width: 100%;
-	height: 50px;
-  padding-right: 35px;
-  border: 2px solid #FF8521;
-	border-radius: 70px;
-	overflow: hidden;
-  background: rgba(244, 244, 244, 0.1);
-/* white */
-
-  border: 1px solid #E7E7E7;
-  backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 30px;
-}
-
-.slider-container .bar .title {
-  position: absolute;
-  z-index: 500;
-  top: 11px;
-  right: 20px;
-  color: white;
-  font-family: 'Futura PT';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-
-.slider-container .slider {
-	position: relative;
-	z-index: 2;
-	-webkit-appearance: none;
-	width: 100%;
-	height: 10px;
-	border-radius: 5px;
-	outline: none;
-	background-color: transparent;
-}
-
-.slider-container .slider::-webkit-slider-thumb {
-  margin-bottom: 12px;
-  margin-left: 20px;
-	-webkit-appearance: none;
-	width: 20px;
-	height: 20px;
-  opacity: var(--opacityIcon);
-  background-color: transparent;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-	cursor: pointer;
-	outline: none;
-	box-shadow: 0 0 0 0 rgba(98,0,238,.1);
-	transition: .3s ease-in-out;
-}
 
 .icon_menu .slider::-webkit-slider-thumb {
 	background-image: var(--linkIcon, url('./images/icon_menu.svg'));
@@ -140,7 +120,7 @@
   opacity: 0;
   width: 100vw;
   min-height: 100vh;
-  transition: opacity 1.3s ease-in;
+  transition: opacity 1.3s linear;
 }
 
 .pages_show {
@@ -184,7 +164,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 70px;
+  margin-bottom: 150px;
 }
 
 .footer span {
@@ -208,30 +189,4 @@
 
 .footer p:last-child {
   text-align: end;
-}
-
-/* ANIMATION */
-
-.animation {
-  width: 130px;
-  position: relative;
-  margin-bottom: 50px;
-  margin-left: 5px;
-}
-
-.palec {
-  position: absolute;
-  animation: 1.3s infinite palec;
-}
-
-.ellipse {
-  left: 107px;
-  position: absolute;
-  width: 27px;
-  height: 27px;
-  overflow: hidden;
-  border-radius: 30px;
-  border: 1.7px dashed #ffffff;
-  margin-bottom: 5px;
-  animation: 1.3s infinite ellipse;
 }
